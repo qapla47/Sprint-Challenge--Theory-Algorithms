@@ -46,11 +46,25 @@ both `antelope` and `antelopes`.)
   Remember the ε transition can be used to move between states without
   consuming input. 
 
-  S0: a
-  S1: b or epsilon (0 b's or more)
-  S2: c (1 c or more)
-  S3: d or epsilon (0 or 1 d, not more)
-  S4: e xor f
+  S0: 
+    case a:
+      state: 1
+  S1: 
+    case 0 or more b's: 
+      state: 2
+    case epsilon 
+      state: 2
+  S2: 
+    case 1 or more c's:
+      state: 3
+  S3: 
+    case: max 1 d 
+      state 4
+    case: epsilon 
+      state: 4
+  S4: 
+    case e xor f
+      state: 5
   S5: final
 
 * A lion can be sleeping, eating, hunting, or preening. Draw a state
